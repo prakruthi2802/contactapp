@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    <title>HTML localstorage Demo</title>
+    <script>
+        if(localStorage.getItem("contacts") == null){
+            var contacts=[];
+           var contact={"name":"prakruthi"};
+            contacts.push(contact);
+            localStorage.setItem("contacts",JSON.stringify(contacts));
+            
+        }
+        else{
+            var contacts=JSON.parse(localStorage.getItem("contacts"));
+            var contact={"name":"vijay"};
+            contacts.push(contact);
+            localStorage.setItem("contacts",JSON.stringify(contacts));
+            alert(contacts.toString());
+    
+        }
+ 
+        </script>
+    
+    </head>
+    
+    <body>
+        
+    <h3> localstorage Demo</h3>    
+        
+    </body>
+    
+    
+</html>
